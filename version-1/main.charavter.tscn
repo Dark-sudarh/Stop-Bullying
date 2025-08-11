@@ -143,7 +143,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_yovcc")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"default",
 "speed": 20.0
 }, {
 "frames": [{
@@ -210,9 +210,7 @@ texture_filter = 1
 position = Vector2(1, 2)
 scale = Vector2(2.71875, 2.71875)
 sprite_frames = SubResource("SpriteFrames_io4kw")
-animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.913607
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 9)
