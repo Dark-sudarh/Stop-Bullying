@@ -1,4 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://crovtohl1556y"]
+[gd_scene load_steps=5 format=3 uid="uid://crovtohl1556y"]
+
+[ext_resource type="Script" uid="uid://betq7ew4g12bj" path="res://meuneo.gd" id="1_e88qd"]
+[ext_resource type="Texture2D" uid="uid://doswo1hgko75h" path="res://pppyhgtkfmjknjkgbfbhghgn.png" id="1_ku4wu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jfxks"]
+texture = ExtResource("1_ku4wu")
+modulate_color = Color(0.521141, 0.521141, 0.52114, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jfxks"]
 bg_color = Color(0.00820202, 0.00820203, 0.00820202, 1)
@@ -6,28 +13,78 @@ corner_radius_top_left = 21
 corner_radius_top_right = 21
 corner_radius_bottom_right = 21
 corner_radius_bottom_left = 21
+shadow_size = 32
 
 [node name="Meuneo" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_e88qd")
 
-[node name="Button" type="Button" parent="."]
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jfxks")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -160.0
-offset_top = -49.5
-offset_right = 160.0
-offset_bottom = 49.5
+offset_left = -201.5
+offset_top = -117.0
+offset_right = 201.5
+offset_bottom = 117.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 22
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_jfxks")
 text = "Start game "
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_jfxks")
+text = "Options"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_jfxks")
+text = "Exit "
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -575.5
+offset_right = 575.5
+offset_bottom = 159.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 74
+text = "Me and you will beat the dragon"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
