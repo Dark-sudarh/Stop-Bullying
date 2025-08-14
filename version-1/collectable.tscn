@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://dtbjuu7mdxc88"]
+[gd_scene load_steps=22 format=3 uid="uid://dtbjuu7mdxc88"]
 
 [ext_resource type="Texture2D" uid="uid://b3c0po10re180" path="res://Free/Items/Fruits/Cherries.png" id="1_3dk6v"]
+[ext_resource type="Script" uid="uid://du2k311ks21hi" path="res://collectable.gd" id="1_un20x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
 atlas = ExtResource("1_3dk6v")
@@ -133,6 +134,7 @@ animations = [{
 radius = 19.105
 
 [node name="collectable" type="Area2D"]
+script = ExtResource("1_un20x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -145,3 +147,5 @@ frame_progress = 0.739098
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_un20x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
