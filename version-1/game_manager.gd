@@ -1,7 +1,9 @@
 extends Node
 
-var fruit = 0
+@onready var label: Label = %Label
+
+var fruits = 0
 
 func add_fruit():
-	fruit += 1
-	print(fruit)
+	fruits += 1
+	print(fruits)
