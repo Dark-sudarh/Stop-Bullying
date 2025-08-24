@@ -1,0 +1,134 @@
+[gd_scene load_steps=3 format=3 uid="uid://gi5p05bbwpie"]
+
+[ext_resource type="Script" uid="uid://b4ex8nffrivko" path="res://main_level.gd" id="1_6614m"]
+[ext_resource type="Texture2D" uid="uid://bm0kthxqwdtyr" path="res://Free/Background/Gray.png" id="1_bw3m6"]
+
+[node name="MainLevel" type="Node"]
+script = ExtResource("1_6614m")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bw3m6")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1154.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "               STAGE 1"
+
+[node name="level 1" type="Button" parent="."]
+offset_left = 14.0
+offset_top = 192.0
+offset_right = 248.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 1"
+
+[node name="level 2" type="Button" parent="."]
+offset_left = 302.0
+offset_top = 190.0
+offset_right = 536.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 2"
+
+[node name="level 3" type="Button" parent="."]
+offset_left = 603.0
+offset_top = 192.0
+offset_right = 837.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 3"
+
+[node name="level 4" type="Button" parent="."]
+offset_left = 898.0
+offset_top = 188.0
+offset_right = 1132.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 4"
+
+[node name="level 5" type="Button" parent="."]
+offset_left = 17.0
+offset_top = 346.0
+offset_right = 251.0
+offset_bottom = 452.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 5"
+
+[node name="level 6" type="Button" parent="."]
+offset_left = 307.0
+offset_top = 342.0
+offset_right = 541.0
+offset_bottom = 448.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 6"
+
+[node name="level 7" type="Button" parent="."]
+offset_left = 603.0
+offset_top = 345.0
+offset_right = 837.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 7"
+
+[node name="level 8" type="Button" parent="."]
+offset_left = 902.0
+offset_top = 352.0
+offset_right = 1136.0
+offset_bottom = 458.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 8"
+
+[node name="level 9" type="Button" parent="."]
+offset_left = 9.0
+offset_top = 485.0
+offset_right = 243.0
+offset_bottom = 591.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 9"
+
+[node name="level 10" type="Button" parent="."]
+offset_left = 307.0
+offset_top = 481.0
+offset_right = 541.0
+offset_bottom = 587.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 10"
+
+[node name="level 11" type="Button" parent="."]
+offset_left = 601.0
+offset_top = 483.0
+offset_right = 835.0
+offset_bottom = 589.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 11"
+
+[node name="level 12" type="Button" parent="."]
+offset_left = 895.0
+offset_top = 485.0
+offset_right = 1129.0
+offset_bottom = 591.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 12"
+
+[connection signal="pressed" from="level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]

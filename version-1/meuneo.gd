@@ -13,11 +13,14 @@ func _process(delta: float) -> void:
 
 func _on_start_pressed() -> void:
 	print("start pressed")
+	get_tree().change_scene_to_file("res://main_level.tscn")
 
 
 func _on_setting_pressed() -> void:
 	print("setting pressed")
+	
 
 
 func _on_exit_pressed() -> void:
 	print("exit pressed")
+	get_tree().quit()

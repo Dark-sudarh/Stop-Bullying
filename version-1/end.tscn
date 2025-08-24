@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://l7muswknrrdn"]
+[gd_scene load_steps=4 format=3 uid="uid://l7muswknrrdn"]
 
+[ext_resource type="Script" uid="uid://dbg706lgp566s" path="res://end.gd" id="1_egc6y"]
 [ext_resource type="Texture2D" uid="uid://bpysl841gn5qs" path="res://Free/Items/Checkpoints/End/End (Idle).png" id="1_n735c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_egc6y"]
 size = Vector2(46, 44)
 
 [node name="end" type="Area2D"]
+script = ExtResource("1_egc6y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
