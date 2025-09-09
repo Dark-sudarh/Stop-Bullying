@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4s8oqtoqena1"]
+[gd_scene load_steps=9 format=3 uid="uid://c4s8oqtoqena1"]
 
 [ext_resource type="Script" uid="uid://bgnbxyw6f010e" path="res://game_manager.gd" id="1_f3nny"]
 [ext_resource type="Texture2D" uid="uid://bfjgjp7b5cbtk" path="res://Free/Background/Brown.png" id="2_pg07v"]
 [ext_resource type="Texture2D" uid="uid://3q460kemfb7q" path="res://Free/Terrain/Terrain (16x16).png" id="3_8x41d"]
 [ext_resource type="PackedScene" uid="uid://dgql1xot6pi6e" path="res://main.charavter.tscn" id="4_l7oop"]
+[ext_resource type="PackedScene" uid="uid://gi5p05bbwpie" path="res://main_level.tscn" id="6_f3nny"]
 [ext_resource type="PackedScene" uid="uid://l7muswknrrdn" path="res://end.tscn" id="6_wfu2w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_coeo2"]
@@ -314,10 +315,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1358.0
-offset_top = -930.0
-offset_right = 2745.0
-offset_bottom = 833.0
+offset_left = -1324.0
+offset_top = -967.0
+offset_right = 2779.0
+offset_bottom = 796.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_pg07v")
@@ -346,6 +347,7 @@ limit_smoothed = true
 
 [node name="end" parent="sceneObjects" instance=ExtResource("6_wfu2w")]
 position = Vector2(3743, 669)
+target_level = ExtResource("6_f3nny")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

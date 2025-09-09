@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6tnp65tupseg"]
+[gd_scene load_steps=10 format=3 uid="uid://b6tnp65tupseg"]
 
 [ext_resource type="Script" uid="uid://bgnbxyw6f010e" path="res://game_manager.gd" id="1_7vc00"]
 [ext_resource type="Texture2D" uid="uid://su370i3d72lh" path="res://Free/Background/Green.png" id="2_klgnm"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dgql1xot6pi6e" path="res://main.charavter.tscn" id="4_ry1g7"]
 [ext_resource type="PackedScene" uid="uid://dtbjuu7mdxc88" path="res://collectable.tscn" id="5_tdkxd"]
 [ext_resource type="PackedScene" uid="uid://l7muswknrrdn" path="res://end.tscn" id="6_fh3di"]
+[ext_resource type="PackedScene" uid="uid://gi5p05bbwpie" path="res://main_level.tscn" id="7_klgnm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7vc00"]
 texture = ExtResource("3_j70lj")
@@ -376,6 +377,7 @@ position = Vector2(1075, 256)
 
 [node name="end" parent="sceneObjects" instance=ExtResource("6_fh3di")]
 position = Vector2(1221, 36)
+target_level = ExtResource("7_klgnm")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
