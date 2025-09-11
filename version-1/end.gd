@@ -14,5 +14,5 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_body_entered(body:):
-	if (body.name == "characterBody2D"):
-		get_tree().change_scene_to_packed(target_level)
+	if (body.name == "CharacterBody2D"):
+		get_tree().change_scene_to_file("res://main_level.tscn")
