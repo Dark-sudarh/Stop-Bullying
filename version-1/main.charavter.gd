@@ -5,6 +5,13 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -750.0
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 
+# get the gravity from the project settings to be synced with Rigidbody nodes
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+func jump():
+	velocity.y = JUMP_VELOCITY
+
+
 func _physics_process(delta: float) -> void:
 	# Animations
 	if (velocity.x > 1 || velocity.x < -1):

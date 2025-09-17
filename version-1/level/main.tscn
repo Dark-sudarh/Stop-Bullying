@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b6tnp65tupseg"]
+[gd_scene load_steps=13 format=3 uid="uid://b6tnp65tupseg"]
 
 [ext_resource type="Script" uid="uid://bgnbxyw6f010e" path="res://game_manager.gd" id="1_7vc00"]
 [ext_resource type="Texture2D" uid="uid://su370i3d72lh" path="res://Free/Background/Green.png" id="2_klgnm"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://l7muswknrrdn" path="res://end.tscn" id="6_fh3di"]
 [ext_resource type="PackedScene" uid="uid://gi5p05bbwpie" path="res://main_level.tscn" id="7_klgnm"]
 [ext_resource type="PackedScene" uid="uid://c5plc6p1i6mng" path="res://enemy.tscn" id="8_tdkxd"]
-[ext_resource type="Script" uid="uid://duqswwpu40f7f" path="res://level/fall_area_2d.gd" id="9_fh3di"]
+[ext_resource type="PackedScene" uid="uid://dulojyuqs7l3y" path="res://level/fall did.tscn" id="9_fh3di"]
 [ext_resource type="Texture2D" uid="uid://bevhnm3ukp220" path="res://free 2/Item 3-1.png.png" id="9_tdkxd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7vc00"]
@@ -306,9 +306,6 @@ texture = ExtResource("3_j70lj")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7vc00")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_epufq"]
-size = Vector2(1261, 19)
-
 [node name="Node" type="Node"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -387,22 +384,11 @@ target_level = ExtResource("7_klgnm")
 
 [node name="Node" type="Node" parent="sceneObjects"]
 
-[node name="Enemy" parent="sceneObjects/Node" instance=ExtResource("8_tdkxd")]
-position = Vector2(1732, 495)
+[node name="Enemy4" parent="sceneObjects/Node" instance=ExtResource("8_tdkxd")]
+position = Vector2(512, 596)
 
-[node name="Enemy2" parent="sceneObjects/Node" instance=ExtResource("8_tdkxd")]
-position = Vector2(1837, 225)
-
-[node name="Enemy3" parent="sceneObjects/Node" instance=ExtResource("8_tdkxd")]
-position = Vector2(493, 568)
-
-[node name="Area2D" type="Area2D" parent="sceneObjects"]
+[node name="Area2D" parent="sceneObjects" instance=ExtResource("9_fh3di")]
 position = Vector2(1239, 757)
-script = ExtResource("9_fh3di")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sceneObjects/Area2D"]
-position = Vector2(3.5, -0.5)
-shape = SubResource("RectangleShape2D_epufq")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -455,5 +441,3 @@ texture = ExtResource("9_tdkxd")
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("9_tdkxd")
-
-[connection signal="body_entered" from="sceneObjects/Area2D" to="sceneObjects/Area2D" method="_on_body_entered"]
